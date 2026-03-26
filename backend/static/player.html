@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>жележный человек</title>
+        <link rel="stylesheet" href="/static/css/player_style.css">
+    </head>
+    <body>
+        <div class="player" id="player">
+            <video id="video" src="/static/assets/player/video.mp4" loop playsinline></video>
+            <a href="index.html" class="player_cancel_img_ico" style=" --icon-path: url('/static/assets/крестик.svg')"></a>
+            <p class="age_restriction">12+</p>
+            <img class="logo_player" src="/static/assets/main/жч_logo.png" alt="">
+            <div class="seek-wrap" id="seek-wrap">
+                <button id="skipskipBtn" class="skip_btn">
+                    Смотреть
+                </button>
+                <button id="skipBtn" class="skip_btn">
+                    Пропустить
+                </button>
+            </div>
+            <div class="controls">
+                <button id="playBtn">►</button>
+                <input type="range" id="volume" min="0" max="1.0" value="1.0" step="0.01">
+                <input type="range" id="seek" min="0" value="0" step="0.01">
+                <span id="time">0:00/0:00</span>
+                <button id="fsBtn">⛶</button>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/player.js"></script>
+</html>

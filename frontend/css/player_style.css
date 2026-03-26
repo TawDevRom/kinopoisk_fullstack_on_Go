@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #000000;
+}
+.player {
+    display: flex;
+    /* position: relative; */
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo_player {
+    position: absolute;
+    height: 60px;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top .2s ease, opacity .2s ease;
+}
+
+.logo_player.hidden{
+    opacity: 0;
+    padding-top: 0px;
+    pointer-events: none;
+}
+
+video {
+    width: 100vw;
+    height: 99.9vh;
+    background: #000;
+    margin: auto;
+}
+
+.seek-wrap {
+    opacity: 1;
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+    transition: right .2s ease, opacity .2s ease;
+}
+.seek-wrap.hidden {
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.skip_btn {
+    margin: 3px;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#skipskipBtn {
+    background: linear-gradient(135deg,red -10%, purple 65%, blue );
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+#skipskipBtn:hover {
+    scale: 1.05;
+    background: linear-gradient(135deg,rgb(225, 1, 1) -10%, rgb(98, 0, 98) 65%, rgb(0, 0, 225) );
+}
+
+#skipBtn {
+    background-color: rgb(32, 32, 32);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+#skipBtn:hover {
+    scale: 1.05;
+    background-color: rgb(50, 50, 50);
+}
+.controls {
+    display: flex;
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.498));
+    color: #ffffff;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity .2s ease, transform .2s ease, padding-bottom .2s ease;
+}
+
+#playBtn {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20pt;
+}
+
+#fsBtn {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20pt;
+}
+
+#time {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#volume {
+    flex: 0;
+    width: 100px;
+}
+
+.player_cancel_img_ico {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    mask-image: var(--icon-path);
+    mask-size: auto;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    margin: 20px 15px;
+    transition: all 0.3s ease;
+}
+
+.player_cancel_img_ico.hidden{
+    opacity: 0;
+    padding-top: 0px;
+    pointer-events: none;
+}
+
+.age_restriction {
+    position: absolute;
+    left: 0;
+    margin: 60px 15px;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 3px 16px;
+    border: solid 3px;
+}
+
+.age_restriction.hidden{
+    opacity: 0;
+    padding-top: 0px;
+    pointer-events: none;
+}
+
+.controls.hidden{
+    opacity: 0;
+    padding-bottom: 0px;
+    pointer-events: none;
+}
+
+.controls input {
+    flex:1;
+    margin: 0 10px ;
+}
